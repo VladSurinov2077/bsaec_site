@@ -2,7 +2,7 @@ $textFontFamily: Helvetica, Arial, sans-serif;
 $textColor: #424242;
 .header{
     width: 100%;
-    min-height: 150px;
+    min-height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,9 +11,13 @@ $textColor: #424242;
         height: 100%;
         display: flex;
         justify-content: space-between;
+        .header_logo{
+            width: 70px;
+            height: 66px;
+        }
         .header_navBox{
             width: 100%;
-            max-width: 1250px;
+            max-width: 650px;
             margin-left: 30px;
             display: flex;
             align-items: center;
@@ -24,6 +28,7 @@ $textColor: #424242;
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 flex-wrap: wrap;
                 list-style: none;
                 .header-nav_item{
@@ -31,11 +36,13 @@ $textColor: #424242;
                         font-family: $textFontFamily;
                         color: $textColor;
                         text-decoration: none;
-                        font-size: 3.4rem;
+                        font-size: 1.4rem;
                         text-wrap-mode: nowrap;
                         .header-nav_icon{
                             margin-right: 6px;
                             vertical-align: middle;
+                            width: 20px;
+                            height: 20px;
                         }
                     }
                 }

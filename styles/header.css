@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  min-height: 150px;
+  min-height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,9 +11,13 @@
   display: flex;
   justify-content: space-between;
 }
+.header .header_contentBox .header_logo {
+  width: 70px;
+  height: 66px;
+}
 .header .header_contentBox .header_navBox {
   width: 100%;
-  max-width: 1250px;
+  max-width: 650px;
   margin-left: 30px;
   display: flex;
   align-items: center;
@@ -25,6 +29,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   list-style: none;
 }
@@ -32,10 +37,12 @@
   font-family: Helvetica, Arial, sans-serif;
   color: #424242;
   text-decoration: none;
-  font-size: 3.4rem;
+  font-size: 1.4rem;
   text-wrap-mode: nowrap;
 }
 .header .header_contentBox .header_navBox .header-nav_list .header-nav_item .header-nav_link .header-nav_icon {
   margin-right: 6px;
   vertical-align: middle;
+  width: 20px;
+  height: 20px;
 }/*# sourceMappingURL=header.css.map */
