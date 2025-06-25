@@ -1,33 +1,207 @@
-.banner {
-  width: 100%;
-  height: 920px;
-  background-color: #D9D9D9;
+/* ВНИМАНИЕ: Стиль контейнера у нас один - в index.css. Просто используй .container в html чтобы использовать этот стиль
+            Если надо изменить какие-то стили или позиционирование внутри контейнера, создай отдельынй <div> внутри .container в html*/
+/*Colleage-specialites*/
+.college-specialties {
+    width: 100%;
+    padding: 60px 0 0 0;
+    background: #f7eef2;
+}
+.college-specialties__wrapper {
+    margin: 0 auto;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.news {
-  margin-top: 100px;
-  display: flex;
-  justify-content: center;
+.college-specialties__header {
+    text-align: center;
+    margin-bottom: 40px;
 }
-.news .news_contentBox .news_title {
-  text-align: center;
-  font-family: Helvetica, Arial, sans-serif;
-  color: #424242;
-  font-size: 128px;
-  font-weight: 500;
+
+.college-specialties__title {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #791051;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
 }
-.news .news_contentBox .news_box {
+
+.college-specialties__subtitle {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2.1rem;
+    color: #9e5991;
+    font-style: italic;
+}
+
+.college-specialties__cards {
+    display: flex;
+    justify-content: center;
+    gap: 70px; /* большее расстояние между кнопками */
+    flex-wrap: wrap;
+}
+
+.college-specialties__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 315px;
+    height: 150px;
+    border-radius: 30px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2.1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(121, 16, 81, 0.12);
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.college-specialties__card--blue {
+    background: #6a99a2;
+    color: #fff;
+}
+
+.college-specialties__card--image {
+    background: rgba(121, 16, 81, 0.5);
+    color: #fff;
+    background-blend-mode: multiply;
+}
+
+.college-specialties__card--image .college-specialties__card-text {
+    background: rgba(121, 16, 81, 0.4);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 2.1rem;
+}
+
+.college-specialties__card:hover {
+    transform: translateY(-7px) scale(1.03);
+    box-shadow: 0 8px 28px rgba(121, 16, 81, 0.22);
+}
+
+@media (max-width: 1050px) {
+    .college-specialties__container {
+        width: 98%;
+        margin: 40px auto 0 auto;
+        padding-bottom: 40px;
+    }
+    .college-specialties__cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        /* УБРАТЬ margin-top: 40px; */
+    }
+    .college-specialties__card {
+        width: 98%;
+        max-width: 350px;
+    }
+}
+/*College-specialities end*/
+/*FAQ start*/
+.faq {
+  background-color: #f3eaf1;
+  padding: 80px 0;
+}
+
+.faq-wrapper {
   width: 100%;
-  height: 1143px;
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  -moz-column-gap: 15px;
-       column-gap: 15px;
-  row-gap: 15px;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 28px;
+  background-color: #6499a8;
+  color: white;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
-.news .news_contentBox .news_box .news-box_item {
-  background-color: #404040;
-  border-radius: 15px;
-}/*# sourceMappingURL=content.css.map */
+
+.faq-left {
+  width: 45%;
+  padding: 60px;
+  background-size: cover;
+  color: white;
+  font-size: 22px;
+}
+
+.faq-left h1 {
+  font-size: 34px;
+  line-height: 1.4;
+}
+
+.faq-left h1 span {
+  color: #ff99ff;
+}
+
+.faq-left p {
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.faq-right {
+  width: 55%;
+  padding: 60px 50px;
+}
+
+.faq-item {
+  margin-bottom: 35px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.faq-question {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffccff;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #ffffff;
+}
+
+.faq-toggle {
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: #906;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg); /* + превращается в x */
+}
+
+.faq-answer {
+  font-size: 20px;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg);
+}
+/*FAQ end*/

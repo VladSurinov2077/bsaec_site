@@ -1,85 +1,76 @@
-<section class="banner">
-    <link rel="stylesheet" href="./styles/content.css">
-    <link rel="stylesheet" href="./styles/faq.css">
-    <link rel="stylesheet" href="./styles/college-specialties.css">
-</section>
-<!--Блок перехода на специальности-->>
+<!-- ВНИМАНИЕ: Стиль контейнера у нас один - в index.css. Просто используй .container в html чтобы использовать этот стиль
+            Если надо изменить какие-то стили или позиционирование внутри контейнера, создай отдельынй <div> внутри .container в html-->
+<!-- И ЕЩЕ: Элементы <script> ставь в самый низ компонента, чтобы скрипты загружались после компонента(для оптимизации) -->
+<link rel="stylesheet" href="./styles/content.css">
+<!--Блок перехода на специальности-->
 <section class="college-specialties">
-            <div class="college-specialties__container">
-                <div class="college-specialties__header">
-                    <h2 class="college-specialties__title">
-                        БОБРУЙСКИЙ ГОСУДАРСТВЕННЫЙ АГРАРНО-ЭКОНОМИЧЕСКИЙ КОЛЛЕДЖ
-                    </h2>
-                    <p class="college-specialties__subtitle">
-                        более 60 лет выпускаем лучших специалистов
-                    </p>
-                </div>
-                <div class="college-specialties__cards">
-                    <a href="/architecture" class="college-specialties__card college-specialties__card--blue">
-                        Архитектура и строительство
-                    </a>
-                    <a href="/business" class="college-specialties__card college-specialties__card--image" style="background-image: url('./res/images/specialty-business.jpg');">
-                        <span class="college-specialties__card-text">Бизнес, управление и право</span>
-                    </a>
-                    <a href="/ict" class="college-specialties__card college-specialties__card--blue">
-                        Информационно-коммуникативные технологии
-                    </a>
-                </div>
-            </div>
-</section>
-<section class="news">
-    <div class="container">
-        <div class="news_contentBox">
-            <h2 class="news_title">Новости</h2>
-            <div class="news_box news-box">
-                <div class="news-box_item1 news-box_item"></div>
-                <div class="news-box_item2 news-box_item"></div>
-                <div class="news-box_item3 news-box_item"></div>
-                <div class="news-box_item4 news-box_item"></div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- FAQ БЛОК -->
-
-    <section class="faq">
-  <div class="faq-container">
-    <div class="faq-left">
-      <h1><span>ОТВЕТЫ</span> НА ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h1>
-      <p>Не нашли ответа? <br> Можете написать нам</p>
-    </div>
-    <div class="faq-right">
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          Какие документы необходимы для поступления?
-          <span class="faq-toggle">+</span>
-        </div>
-        <div class="faq-answer">
-          Вам необходимо подготовить документы:<br>
-          - паспорт<br>
-          - аттестат<br>
-          - фотографии
-        </div>
+  <div class="container">
+    <div class="college-specialties__wrapper">
+      <div class="college-specialties__header">
+        <h2 class="college-specialties__title">
+          БОБРУЙСКИЙ ГОСУДАРСТВЕННЫЙ АГРАРНО-ЭКОНОМИЧЕСКИЙ КОЛЛЕДЖ
+        </h2>
+        <p class="college-specialties__subtitle">
+          более 60 лет выпускаем лучших специалистов
+        </p>
       </div>
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          Как узнать медицинский допуск к выбору профессии?
-          <span class="faq-toggle">+</span>
-        </div>
-        <div class="faq-answer">
-          Медицинский допуск можно получить в медучреждении после обследования.
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          Как узнать медицинский допуск к выбору профессии?
-          <span class="faq-toggle">+</span>
-        </div>
-        <div class="faq-answer">
-          Медицинский допуск можно получить в медучреждении после обследования.
-        </div>
+      <div class="college-specialties__cards">
+        <a href="/architecture" class="college-specialties__card college-specialties__card--blue">
+          Архитектура и строительство
+        </a>
+        <a href="/business" class="college-specialties__card college-specialties__card--image"
+          style="background-image: url('./res/images/specialty-business.jpg');">
+          <span class="college-specialties__card-text">Бизнес, управление и право</span>
+        </a>
+        <a href="/ict" class="college-specialties__card college-specialties__card--blue">
+          Информационно-коммуникативные технологии
+        </a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FAQ БЛОК -->
+<section class="faq">
+  <div class="container">
+    <div class="faq-wrapper">
+      <div class="faq-left">
+        <h1><span>ОТВЕТЫ</span> НА ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h1>
+        <p>Не нашли ответа? <br> Можете написать нам</p>
+      </div>
+      <div class="faq-right">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Какие документы необходимы для поступления?
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            Вам необходимо подготовить документы:<br>
+            - паспорт<br>
+            - аттестат<br>
+            - фотографии
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Как узнать медицинский допуск к выбору профессии?
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            Медицинский допуск можно получить в медучреждении после обследования.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Как узнать медицинский допуск к выбору профессии?
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            Медицинский допуск можно получить в медучреждении после обследования.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/faqAnim.js"></script>
+</section>
