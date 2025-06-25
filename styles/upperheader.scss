@@ -1,0 +1,42 @@
+$textFontFamily: Helvetica, Arial, sans-serif;
+$textColor: #424242;
+.upperheader{
+    background-color: #D9D9D9;
+    min-height: 57px;
+    display: flex;
+    justify-content: center;
+    .upperheader_contentBox{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .upperheader_darkModeBox{
+            width: 175px;
+            display: flex;
+            justify-content: space-between;
+
+            .upperheader-darkModeBox_label{
+                min-width: 105px;
+                font-family: $textFontFamily;
+                font-size: 2rem;
+                color: $textColor;
+            }
+            .upperheader-darkModeBox_toggleThemeBtn{
+                background: none;
+                border: none;
+            }
+        }
+        .upperheader_chooseLangBox{
+            width: 100%;
+            max-width: 100px;
+            display: flex;
+            justify-content: space-between;
+            .upperheader-chooseLangBox_lang{
+                text-decoration: none;
+                font-family: $textFontFamily;
+                color: $textColor;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
