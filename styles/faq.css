@@ -1,0 +1,100 @@
+.faq {
+  background-color: #f3eaf1;
+  padding: 80px 0;
+}
+
+.faq-container {
+  display: flex;
+  width: 1300px; /* шире блок */
+  margin: 0 auto;
+  border-radius: 28px;
+  background-color: #6499a8;
+  color: white;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.faq-left {
+  width: 45%;
+  padding: 60px;
+  background-size: cover;
+  color: white;
+  font-size: 22px;
+}
+
+.faq-left h1 {
+  font-size: 34px;
+  line-height: 1.4;
+}
+
+.faq-left h1 span {
+  color: #ff99ff;
+}
+
+.faq-left p {
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.faq-right {
+  width: 55%;
+  padding: 60px 50px;
+}
+
+.faq-item {
+  margin-bottom: 35px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.faq-question {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffccff;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #ffffff;
+}
+
+.faq-toggle {
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: #906;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg); /* + превращается в x */
+}
+
+.faq-answer {
+  font-size: 20px;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg);
+}
