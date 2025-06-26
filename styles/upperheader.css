@@ -13,6 +13,10 @@
   justify-content: space-between;
   align-items: center;
 }
+.upperheader_logo{
+  width: 90px;
+  height: 90px;
+}
 .upperheader .upperheader_contentBox .upperheader_chooseLangBox {
   width: 100%;
   max-width: 100px;
@@ -27,4 +31,56 @@
 }
 .upperheader_govsymb{
   margin-right: 5px;
+}
+.upperheader-dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+}
+
+.upperheader-dropdown_toggle {
+    border: none;
+    color: #111111;
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 80px;
+    text-align: left;
+    position: relative;
+}
+
+.upperheader-dropdown_toggle:after {
+    content: "▼";
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.upperheader-dropdown_menu {
+    display: none;
+    position: absolute;
+    border: none;
+    background-color: #f9f9f9;
+    width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.upperheader-dropdown_menu li a {
+    color: #111111;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.upperheader-dropdown_menu li a:hover {
+    background-color: #f1f1f1;
+}
+
+.upperheader-dropdown_menu.show {
+    display: block;
 }
