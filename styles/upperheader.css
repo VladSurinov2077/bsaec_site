@@ -1,29 +1,17 @@
 .upperheader {
-  background-color: #D9D9D9;
+  background-color: #f7eef2;
   min-height: 57px;
-  display: flex;
-  justify-content: center;
+}
+.upperheader_container{
+  width: 90%;
+  margin: 0 auto;
 }
 .upperheader .upperheader_contentBox {
-  height: 100%;
+  min-height: 57px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.upperheader .upperheader_contentBox .upperheader_darkModeBox {
-  width: 175px;
-  display: flex;
-  justify-content: space-between;
-}
-.upperheader .upperheader_contentBox .upperheader_darkModeBox .upperheader-darkModeBox_label {
-  min-width: 105px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 2rem;
-  color: #424242;
-}
-.upperheader .upperheader_contentBox .upperheader_darkModeBox .upperheader-darkModeBox_toggleThemeBtn {
-  background: none;
-  border: none;
 }
 .upperheader .upperheader_contentBox .upperheader_chooseLangBox {
   width: 100%;
@@ -36,4 +24,7 @@
   font-family: Helvetica, Arial, sans-serif;
   color: #424242;
   font-size: 1.6rem;
-}/*# sourceMappingURL=upperheader.css.map */
+}
+.upperheader_govsymb{
+  margin-right: 5px;
+}
