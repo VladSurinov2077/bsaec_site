@@ -1,75 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <link rel="stylesheet" href="./styles/index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>УО "Бобруйский государственный аграрно-экономический колледж"</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="upperheader">
-            <div class="container">
-                <div class="upperheader_contentBox">
-                    <div class="upperheader_darkModeBox upperheader-darkModeBox">
-                        <label class="upperheader-darkModeBox_label" for="#toggleThemeBtn">Dark Mode!</label>
-                        <button class="upperheader-darkModeBox_toggleThemeBtn upperheader-toggleThemeBtn"
-                            id="toggleThemeBtn">
-                            <div class="upperheader-toggleThemeBtn_icon toggleThemeIcon">
-                                <div class="toggleThemeIcon_box">
-                                    <div class="toggleThemeIcon_ellipse"></div>
+        <div class="wrapper-header" id="headerImportBox"></div>
+        <main class="wrapper-content" id="contentImportBox">
+            <!--Блок перехода на специальности-->
+            <section class="college-specialties">
+                <div class="container">
+                    <div class="college-specialties__wrapper">
+                        <div class="college-specialties__header">
+                            <h2 class="college-specialties__title">
+                                БОБРУЙСКИЙ ГОСУДАРСТВЕННЫЙ АГРАРНО-ЭКОНОМИЧЕСКИЙ КОЛЛЕДЖ
+                            </h2>
+                            <p class="college-specialties__subtitle">
+                                более 60 лет выпускаем лучших специалистов
+                            </p>
+                        </div>
+                        <div class="college-specialties__cards">
+                            <a href="/architecture" class="college-specialties__card college-specialties__card--blue">
+                                Архитектура и строительство
+                            </a>
+                            <a href="/business" class="college-specialties__card college-specialties__card--image"
+                                style="background-image: url('./res/images/specialty-business.jpg');">
+                                <span class="college-specialties__card-text">Бизнес, управление и право</span>
+                            </a>
+                            <a href="/ict" class="college-specialties__card college-specialties__card--blue">
+                                Информационно-коммуникативные технологии
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Меню-слайдер -->
+            <section class="banner">
+                <div class="container">
+                    <div class="slider">
+                        <div class="slides">
+                            <div class="slide" style="background-image: url('');">
+                                <div class="slide-content">
+                                    <h2>Добро пожаловать в наш колледж</h2>
+                                    <p>Лучшее место для вашего образования</p>
                                 </div>
                             </div>
-                        </button>
-                    </div>
-                    <div class="upperheader_chooseLangBox upperheader-chooseLangBox">
-                        <a href="" class="upperheader-chooseLangBox_lang">BE</a>
-                        <a href="" class="upperheader-chooseLangBox_lang">RU</a>
-                        <a href="" class="upperheader-chooseLangBox_lang">EN</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <header class="header">
-            <div class="container">
-                <div class="header_contentBox">
-                    <a class="header_iconLink">
-                        <img class="header_icon" src="./res/icons/icon_main.png">
-                    </a>
-                    <div class="header_navBox">
-                        <nav class="header_nav header-nav">
-                            <ul class="header-nav_list">
-                                <li class="header-nav_item"><a href="" class="header-nav_link">Студенту</a></li>
-                                <li class="header-nav_item"><a href="" class="header-nav_link">Абитуриенту</a></li>
-                                <li class="header-nav_item"><a href="" class="header-nav_link">Новости</a></li>
-                                <li class="header-nav_item"><a href="" class="header-nav_link">О колледже</a></li>
-                                <li class="header-nav_item"><a href="" class="header-nav_link">ЦТ/ЦЭ</a></li>
-                                <li class="header-nav_item"><a href="" class="header-nav_link"><img
-                                            src="./res/icons/icon_phone.png" alt="" class="header-nav_icon">Контакты</a>
-                                </li>
-                            </ul>
-                        </nav>
+                            <div class="slide" style="background-image: url('');">
+                                <div class="slide-content">
+                                    <h2>Современные программы обучения</h2>
+                                    <p>Подготовка к будущей карьере</p>
+                                </div>
+                            </div>
+                            <div class="slide" style="background-image: url('');">
+                                <div class="slide-content">
+                                    <h2>Активная студенческая жизнь</h2>
+                                    <p>Участвуйте в наших мероприятиях</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="prev">❮</button>
+                        <button class="next">❯</button>
+                        <div class="dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </header>
-        <section class="banner"></section>
-        <section class="news">
-            <div class="container">
-                <div class="news_contentBox">
-                    <h2 class="news_title">Новости</h2>
-                    <div class="news_box news-box">
-                        <div class="news-box_item1 news-box_item"></div>
-                        <div class="news-box_item2 news-box_item"></div>
-                        <div class="news-box_item3 news-box_item"></div>
-                        <div class="news-box_item4 news-box_item"></div>
+            </section>
+            <!-- FAQ БЛОК -->
+            <section class="faq">
+                <div class="container">
+                    <div class="faq-wrapper">
+                        <div class="faq-left">
+                            <h1><span>ОТВЕТЫ</span> НА ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h1>
+                            <p>Не нашли ответа? <br> Можете написать нам</p>
+                        </div>
+                        <div class="faq-right">
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFaq(this)">
+                                    Какие документы необходимы для поступления?
+                                    <span class="faq-toggle">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    Вам необходимо подготовить документы:<br>
+                                    - паспорт<br>
+                                    - аттестат<br>
+                                    - фотографии
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFaq(this)">
+                                    Как узнать медицинский допуск к выбору профессии?
+                                    <span class="faq-toggle">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    Медицинский допуск можно получить в медучреждении после обследования.
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFaq(this)">
+                                    Как узнать медицинский допуск к выбору профессии?
+                                    <span class="faq-toggle">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    Медицинский допуск можно получить в медучреждении после обследования.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
+        <div class="wrapper-footer" id="footerImportBox"></div>
     </div>
+    <script src="./scripts/FAQ-animatiom.js"></script>
+    <script src="./scripts/news-animation.js"></script>
+    <script src="./scripts/upperheader-dropdown.js"></script>
+    <script src="./scripts/header-menu-dropdown.js"></script>
+    <script src="./scripts/header-nav-dropdown.js"></script>
+    <script src="./scripts/router.js" type="module"></script>
 </body>
 
 </html>

@@ -7,9 +7,13 @@
 html {
   font-size: 10px;
 }
-
+body{
+  background-color: #f7eef2;
+}
 .container {
+  margin: 0 auto;
   width: 80%;
+  max-width: 1920px;
 }
 
 .toggleThemeIcon {
@@ -33,119 +37,726 @@ html {
   background-color: #D9D9D9;
   border-radius: 90px;
 }
+/* MainPage Start */
+/* ВНИМАНИЕ: Стиль контейнера у нас один - в index.css. Просто используй .container в html чтобы использовать этот стиль
+            Если надо изменить какие-то стили или позиционирование внутри контейнера, создай отдельынй <div> внутри .container в html*/
+/*Colleage-specialites*/
+.college-specialties {
+    width: 100%;
+    padding: 60px 0 0 0;
+    background: #f7eef2;
+}
+.college-specialties__wrapper {
+    margin: 0 auto;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.upperheader {
-  background-color: #D9D9D9;
-  min-height: 57px;
+.college-specialties__header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.college-specialties__title {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #791051;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+.college-specialties__subtitle {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2.1rem;
+    color: #9e5991;
+    font-style: italic;
+}
+
+.college-specialties__cards {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.college-specialties__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 315px;
+    height: 150px;
+    border-radius: 30px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2.1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(121, 16, 81, 0.12);
+    text-align: center;
+    /* position: relative; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.college-specialties__card--blue {
+    background: #6a99a2;
+    color: #fff;
+}
+
+.college-specialties__card--image {
+    background: rgba(121, 16, 81, 0.5);
+    color: #fff;
+    background-blend-mode: multiply;
+}
+
+.college-specialties__card--image .college-specialties__card-text {
+    background: rgba(121, 16, 81, 0.4);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 2.1rem;
+}
+
+.college-specialties__card:hover {
+    transform: translateY(-7px) scale(1.03);
+    box-shadow: 0 8px 28px rgba(121, 16, 81, 0.22);
+}
+
+@media (max-width: 1050px) {
+    .college-specialties__container {
+        width: 98%;
+        margin: 40px auto 0 auto;
+        padding-bottom: 40px;
+    }
+    .college-specialties__cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+    .college-specialties__card {
+        width: 98%;
+        max-width: 350px;
+    }
+}
+/*College-specialities end*/
+/*FAQ start*/
+.faq {
+  background-color: #f3eaf1;
+  padding: 80px 0;
+}
+
+.faq-wrapper {
+  width: 100%;
   display: flex;
+  margin: 0 auto;
+  border-radius: 28px;
+  background-color: #6499a8;
+  color: white;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.faq-left {
+  width: 45%;
+  padding: 60px;
+  background-size: cover;
+  color: white;
+  font-size: 22px;
+}
+
+.faq-left h1 {
+  font-size: 34px;
+  line-height: 1.4;
+}
+
+.faq-left h1 span {
+  color: #ff99ff;
+}
+
+.faq-left p {
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.faq-right {
+  width: 55%;
+  padding: 60px 50px;
+}
+
+.faq-item {
+  margin-bottom: 35px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.faq-question {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffccff;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #ffffff;
+}
+
+.faq-toggle {
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: #906;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-}
-.upperheader .upperheader_contentBox {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.upperheader .upperheader_contentBox .upperheader_darkModeBox {
-  width: 175px;
-  display: flex;
-  justify-content: space-between;
-}
-.upperheader .upperheader_contentBox .upperheader_darkModeBox .upperheader-darkModeBox_label {
-  min-width: 105px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 2rem;
-  color: #424242;
-}
-.upperheader .upperheader_contentBox .upperheader_darkModeBox .upperheader-darkModeBox_toggleThemeBtn {
-  background: none;
-  border: none;
-}
-.upperheader .upperheader_contentBox .upperheader_chooseLangBox {
-  width: 100%;
-  max-width: 100px;
-  display: flex;
-  justify-content: space-between;
-}
-.upperheader .upperheader_contentBox .upperheader_chooseLangBox .upperheader-chooseLangBox_lang {
-  text-decoration: none;
-  font-family: Helvetica, Arial, sans-serif;
-  color: #424242;
-  font-size: 1.6rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  /* aspect-ratio: 1/1;  // можно добавить, если поддерживается */
 }
 
-.header {
-  width: 100%;
-  min-height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header .header_contentBox {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.header .header_contentBox .header_navBox {
-  width: 100%;
-  max-width: 1250px;
-  margin-left: 30px;
-  display: flex;
-  align-items: center;
-}
-.header .header_contentBox .header_navBox .header-nav {
-  width: 100%;
-}
-.header .header_contentBox .header_navBox .header-nav_list {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  list-style: none;
-}
-.header .header_contentBox .header_navBox .header-nav_list .header-nav_item .header-nav_link {
-  font-family: Helvetica, Arial, sans-serif;
-  color: #424242;
-  text-decoration: none;
-  font-size: 3.4rem;
-  text-wrap-mode: nowrap;
-}
-.header .header_contentBox .header_navBox .header-nav_list .header-nav_item .header-nav_link .header-nav_icon {
-  margin-right: 6px;
-  vertical-align: middle;
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg);
 }
 
-.banner {
-  width: 100%;
-  height: 920px;
-  background-color: #D9D9D9;
+.faq-answer {
+  font-size: 20px;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 
+.faq-item.open .faq-answer {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg);
+}
+/* ===== Адаптивность ===== */
+@media (max-width: 500px) {
+  .faq-wrapper {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .faq-left,
+  .faq-right {
+    width: 100%;
+    padding: 20px 20px 0 20px;
+  }
+
+  .faq-left {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .faq-left h1 {
+    font-size: 22px;
+  }
+
+  .faq-left p {
+    font-size: 16px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+  }
+
+  .faq-answer {
+    font-size: 16px;
+  }
+
+   .faq-toggle {
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+  }
+}
+/*FAQ end*/
+/* Стили для слайдера */
+.slider {
+    background: #f7eef2;
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    height: 50vw;
+    max-height: 600px;
+    min-height: 300px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-content {
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 80%;
+    box-sizing: border-box;
+}
+
+.slide-content h2 {
+    margin: 0;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.slide-content p {
+    margin: 0.5rem 0 0;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: clamp(8px, 2vw, 12px);
+    cursor: pointer;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    z-index: 10;
+}
+
+.prev {
+    left: 1rem;
+}
+
+.next {
+    right: 1rem;
+}
+
+.dots {
+    text-align: center;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+}
+
+.dot {
+    display: inline-block;
+    width: clamp(8px, 1.5vw, 12px);
+    height: clamp(8px, 1.5vw, 12px);
+    margin: 0 0.5rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .slider {
+        height: 60vw;
+        min-height: 250px;
+    }
+
+    .slide-content {
+        padding: 1rem;
+        max-width: 90%;
+    }
+
+    .prev, .next {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        margin: 0 0.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        height: 80vw;
+        min-height: 200px;
+    }
+
+    .slide-content {
+        padding: 0.75rem;
+    }
+
+    .slide-content h2 {
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
+    }
+
+    .slide-content p {
+        font-size: clamp(0.8rem, 3vw, 1.2rem);
+    }
+
+    .prev, .next {
+        padding: 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    .dot {
+        width: 6px;
+        height: 6px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .slider {
+        height: 400px;
+    }
+}
 .news {
-  margin-top: 100px;
-  display: flex;
-  justify-content: center;
+    padding: 60px 0;
+    background-color: #f7eef2;
 }
-.news .news_contentBox .news_title {
-  text-align: center;
-  font-family: Helvetica, Arial, sans-serif;
-  color: #424242;
-  font-size: 128px;
-  font-weight: 500;
+
+.news-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: flex-start;
+    flex-wrap: wrap; */
+    gap: 20px;
 }
-.news .news_contentBox .news_box {
-  width: 100%;
-  height: 1143px;
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  -moz-column-gap: 15px;
-       column-gap: 15px;
-  row-gap: 15px;
+
+.news-title {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2.8rem;
+    color: #791051;
+    margin-bottom: 20px;
+    text-align: left;
 }
-.news .news_contentBox .news_box .news-box_item {
-  background-color: #404040;
-  border-radius: 15px;
-}/*# sourceMappingURL=index.css.map */
+
+.news-items {
+    flex: 0 1 60%;
+    /* display: flex;
+    flex-direction: column;
+    gap: 20px; */
+}
+
+.news-item {
+    background: linear-gradient(to right, #8a4af3, #d1c4e9);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    text-align: left;
+}
+
+.news-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #6b2a8a;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.news-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.news-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-item ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.news-right {
+    flex: 0 1 35%;
+    /* display: flex;
+    flex-direction: column;
+    gap: 20px; */
+}
+
+.news-banners {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.banner-item {
+    height: 150px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-content {
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.banner-content h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.banner-content p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+}
+
+.college-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    background: linear-gradient(to right, #8a4af3, #d1c4e9);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    text-align: left;
+}
+
+.info-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #6b2a8a;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.info-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.info-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-item ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .news-wrapper {
+        flex-direction: column;
+    }
+
+    .news-title {
+        text-align: center;
+    }
+
+    .news-items, .news-right {
+        width: 100%;
+    }
+
+    .banner-item {
+        height: 120px;
+    }
+
+    .news-item, .info-item {
+        padding: 15px;
+    }
+
+    .news-dot, .info-dot {
+        left: -20px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .news-item h3, .info-item h3 {
+        font-size: 16px;
+    }
+
+    .news-item ul li, .info-item ul li {
+        font-size: 12px;
+    }
+}
+/* Новые стили для страницы "Структура колледжа" */
+.structure {
+    background-color: #4b0082;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.structure_title {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.structure_subtitle {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.structure_director {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.structure_admin, .structure_specialists, .structure_teachers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.structure_adminItem, .structure_specialistItem {
+    flex: 1 1 45%;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.structure_photo {
+    max-width: 150px;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.structure_hierarchy {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.structure_hierarchyItem h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+}
+
+.structure_hierarchyItem ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.structure_hierarchyItem ul li {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.structure_hierarchyItem ul li::before {
+    content: "•";
+    color: #ffd700;
+    position: absolute;
+    left: -1.5rem;
+}
+
+.structure_teachersList {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.structure_teachersList li {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 0.5rem;
+}
+
+.structure_contacts {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.structure_contacts p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 1rem;
+}
+
+.structure_map {
+    margin-top: 1rem;
+}
+
+.structure_map #map {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Медиа-запросы для страницы "Структура колледжа" */
+@media (max-width: 768px) {
+    .structure_adminItem, .structure_specialistItem {
+        flex: 1 1 100%;
+    }
+
+    .structure_teachersList {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .structure_title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+
+    .structure_subtitle {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    .structure_adminItem, .structure_specialistItem {
+        padding: 1rem;
+    }
+
+    .structure_photo {
+        max-width: 120px;
+    }
+
+    .structure_teachersList li {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+    }
+}
+/* MainPage End*/

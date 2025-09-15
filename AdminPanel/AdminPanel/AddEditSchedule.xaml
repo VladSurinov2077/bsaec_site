@@ -1,0 +1,67 @@
+﻿<Window x:Class="AdminPanel.AddEditSchedule"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdminPanel"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        mc:Ignorable="d"
+        Title="AddEditSchedule" Height="400" Width="650">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Dictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Button Click="ClosingWindow" VerticalAlignment="Top" Padding="10" HorizontalAlignment="Right" Style="{StaticResource CloseButton}">
+            <Image Source="/Image/cross.png" Width="20"/>
+        </Button>
+        <Label x:Name="MainLabal" HorizontalAlignment="Center" Margin="0,20" FontSize="20" Foreground="#65919c" FontWeight="Bold">Временное расписание</Label>
+        <StackPanel VerticalAlignment="Top" Margin="0,80,0,0">
+            <ScrollViewer Name="Scroll" Margin="10,0,10,10" Height="240" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="120" />
+                        </Grid.ColumnDefinitions>
+                        <Label Padding="5,5" Grid.Row="0" Grid.Column="0" FontSize="20">№</Label>
+                        <Label Padding="5,5" Grid.Row="0" Grid.Column="1" FontSize="20">Предмет</Label>
+                        <Label Padding="5,5" Grid.Row="0" Grid.Column="2" FontSize="20">Преподователи</Label>
+                        <Label Padding="5,5" Grid.Row="0" Grid.Column="3" FontSize="20">Кабинеты</Label>
+                    </Grid>
+                    <StackPanel x:Name="ScheduleTermList">
+                        
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="MainButton" IsEnabled="False" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,30,20" Click="SaveSchedule">Сохранить</Button>
+                <Button Name="ResetButton" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,20" Click="ResetSchedule">Сбросить</Button>
+            </StackPanel>
+        </StackPanel>
+        <Canvas x:Name="MyCanvas" VerticalAlignment="Top" HorizontalAlignment="Left" Width="650" Height="400" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Image/canvas2.png"/>
+            </Canvas.Background>
+            <Border Background="#65919c" Canvas.Top="115" Canvas.Left="150" Width="350" Height="170" CornerRadius="15">
+                <StackPanel Margin="10,5">
+                    <Label x:Name="CanvasMain" FontSize="25" Foreground="White" HorizontalAlignment="Center" >Добавление</Label>
+                    <TextBlock FontSize="20" x:Name="CanvasDescription" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" Foreground="White">Вы действительно хотите добавить преподователя?</TextBlock>
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
+                        <Button Click="ButtonYes" Style="{StaticResource RoundedButtonStyleWhite}" Width="120" Height="35" FontSize="18" Margin="0,5,40,5">Да</Button>
+                        <Button Click="ButtonNo" Style="{StaticResource RoundedButtonStyleWhite}" Width="120" FontSize="18" Height="35">Нет</Button>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Canvas>
+    </Grid>
+</Window>

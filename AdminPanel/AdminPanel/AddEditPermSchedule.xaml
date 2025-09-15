@@ -1,0 +1,157 @@
+﻿<Window x:Class="AdminPanel.AddEditPermSchedule"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdminPanel"
+        AllowsTransparency="True"
+		WindowStyle="None"
+        mc:Ignorable="d"
+        Title="AddEditPermSchedule" Height="400" Width="650">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Dictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Button
+			VerticalAlignment="Top"
+			Padding="10"
+			HorizontalAlignment="Right"
+			Style="{StaticResource CloseButton}"
+			Click="ClosingWindow">
+            <Image
+				Source="/Image/cross.png"
+				Width="20" />
+        </Button>
+        <Label
+			Name="MainLabel"
+			FontSize="20"
+			HorizontalAlignment="Center"
+			Margin="0,20,0,0"
+			Foreground="#65919c"
+			FontWeight="Bold">Изменение расписания группы 30-П</Label>
+        <StackPanel
+			VerticalAlignment="Top"
+			Margin="0,80,0,0">
+            <StackPanel
+				Orientation="Horizontal">
+                <Label
+					FontSize="20">Выберите день:</Label>
+                <ComboBox
+					Name="ComboDay"
+					Width="180"
+					Height="30"
+					Margin="20,0,0,0" />
+            </StackPanel>
+            <ScrollViewer
+				Name="Scroll"
+				Margin="10,10,10,0"
+				Height="190"
+				VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition
+								Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+								Width="Auto" />
+                            <ColumnDefinition
+								Width="*" />
+                            <ColumnDefinition
+								Width="*" />
+                            <ColumnDefinition
+								Width="120" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+							Padding="5,5"
+							Grid.Row="0"
+							Grid.Column="0"
+							FontSize="20">№</Label>
+                        <Label
+							Padding="5,5"
+							Grid.Row="0"
+							Grid.Column="1"
+							FontSize="20">Предмет</Label>
+                        <Label
+							Padding="5,5"
+							Grid.Row="0"
+							Grid.Column="2"
+							FontSize="20">Преподователи</Label>
+                        <Label
+							Padding="5,5"
+							Grid.Row="0"
+							Grid.Column="3"
+							FontSize="20">Кабинеты</Label>
+                    </Grid>
+                    <StackPanel
+						Name="ScheduleList" />
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+        <Button
+			Name="MainButton"
+			Style="{StaticResource RoundedButtonStyle}"
+			VerticalAlignment="Bottom"
+			HorizontalAlignment="Center"
+			Margin="0,0,0,20"
+			Click="SaveSchedule">Сохранить</Button>
+        <Canvas
+			Name="MyCanvas"
+			VerticalAlignment="Top"
+			HorizontalAlignment="Left"
+			Width="700"
+			Height="400"
+			Visibility="Collapsed">
+            <Panel.Background>
+                <ImageBrush
+					ImageSource="/Image/canvas2.png" />
+            </Panel.Background>
+            <Border
+				Background="#65919c"
+				Canvas.Top="115"
+				Canvas.Left="175"
+				Width="350"
+				Height="170"
+				CornerRadius="15">
+                <StackPanel
+					Margin="10,5">
+                    <Label
+						Name="CanvasMain"
+						FontSize="25"
+						Foreground="#FFFFFFFF"
+						HorizontalAlignment="Center">Добавление</Label>
+                    <TextBlock
+						Name="CanvasDescription"
+						FontSize="20"
+						HorizontalAlignment="Center"
+						TextWrapping="Wrap"
+						TextAlignment="Center"
+						Foreground="#FFFFFFFF">Вы действительно хотите добавить преподователя?</TextBlock>
+                    <StackPanel
+						Margin="0,10,0,0"
+						HorizontalAlignment="Center"
+						Orientation="Horizontal">
+                        <Button
+							Style="{StaticResource RoundedButtonStyleWhite}"
+							Width="120"
+							Height="35"
+							FontSize="18"
+							Margin="0,5,40,5"
+							Click="ButtonYes">Да</Button>
+                        <Button
+							Style="{StaticResource RoundedButtonStyleWhite}"
+							Width="120"
+							FontSize="18"
+							Height="35"
+							Click="ButtonNo">Нет</Button>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Canvas>
+    </Grid>
+</Window>

@@ -1,0 +1,220 @@
+﻿<Window x:Class="AdminPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdminPanel"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="Главное меню" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Dictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Cursor="">
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Top">
+            <Button Click="CollapseWindow" Height="30" Width="30" Style="{StaticResource ButtonClotting}">
+                <Image Source="/Image/collapse.png" Width="15"/>
+            </Button>
+            <Button Click="FullWindow" Height="30" Width="30" Style="{StaticResource ButtonClotting}">
+                <Image x:Name="ImgFull" Source="/Image/fullno.png" Width="15"/>
+            </Button>
+            <Button Height="30" Style="{StaticResource ButtonClotting}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Image/exit.png" Width="30"/>
+                    <Label Padding="0,5,5,5">Выйти</Label>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+            <StackPanel x:Name="PullMenu" Margin="10,0,0,0" VerticalAlignment="Center">
+                <Label Margin="10" FontSize="18" HorizontalAlignment="Center">Админ панель</Label>
+                <ScrollViewer x:Name="ScrollMenu" CanContentScroll="False" VerticalScrollBarVisibility="Auto" Height="300">
+                    <StackPanel HorizontalAlignment="Center" Width="200">
+                        <ToggleButton x:Name="TeacherButton" Tag="1" Click="ClickButtonMenu" Style="{StaticResource RoundedToggleButtonStyle}">Преподаватели</ToggleButton>
+                        <ToggleButton x:Name="SpecButton" Tag="2" Click="ClickButtonMenu" Style="{StaticResource RoundedToggleButtonStyle}">Специальности</ToggleButton>
+                        <ToggleButton x:Name="AdminTypeButton" Tag="3" Click="ClickButtonMenu" Style="{StaticResource RoundedToggleButtonStyle}">Состав</ToggleButton>
+                        <ToggleButton x:Name="JobButton" Tag="4" Click="ClickButtonMenu" Style="{StaticResource RoundedToggleButtonStyle}">Должности</ToggleButton>
+                        <ToggleButton x:Name="ScoreButton" Tag="5" Click="ClickButtonMenu" Style="{StaticResource RoundedToggleButtonStyle}">Проходные баллы</ToggleButton>
+                        <ToggleButton x:Name="SubjectButton" Tag="6" Click="ClickButtonMenu" Style="{StaticResource RoundedToggleButtonStyle}">Предметы</ToggleButton>
+                        <ToggleButton x:Name="GroupButton" Tag="7" Click="ClickButtonMenu" Style="{StaticResource RoundedToggleButtonStyle}">Группы</ToggleButton>
+                        <ToggleButton x:Name="ScheduleButton" Tag="8" Click="ClickButtonMenu" Style="{StaticResource RoundedToggleButtonStyle}">Врем. расписание</ToggleButton>
+                        <ToggleButton x:Name="SchedulePermButton" Tag="9" Click="ClickButtonMenu" Style="{StaticResource RoundedToggleButtonStyle}">Пост. расписание</ToggleButton>
+                        <ToggleButton Style="{StaticResource RoundedToggleButtonStyle}">Преподователи</ToggleButton>
+                        <ToggleButton Style="{StaticResource RoundedToggleButtonStyle}">Преподователи</ToggleButton>
+                    </StackPanel>
+                </ScrollViewer>
+            </StackPanel>
+            <StackPanel x:Name="BlockEdit" Margin="0,30" VerticalAlignment="Center">
+                <Canvas VerticalAlignment="Top" HorizontalAlignment="Right">
+                    <Button x:Name="UpDateButton" Click="UpDateList" Width="25" Height="25" Style="{StaticResource ButtonClotting}" Canvas.Top="25" Canvas.Right="40">
+                        <Image Source="/Image/update.png" Width="15"/>
+                    </Button>
+                </Canvas>
+                <Border x:Name="EditBorder" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="#4e6f78" Width="300" Height="300" CornerRadius="15" Margin="15">
+                    <StackPanel>
+                        <Grid x:Name="TeacherWindow" HorizontalAlignment="Center" Visibility="Collapsed">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" FontSize="20" HorizontalAlignment="Center">Преподаватели</Label>
+                            <ScrollViewer Grid.Row="1" x:Name="TeacherScroll" CanContentScroll="False" VerticalScrollBarVisibility="Auto">
+                                <WrapPanel x:Name="TeacherList">
+
+                                </WrapPanel>
+                            </ScrollViewer>
+                            <Button Grid.Row="2" x:Name="TeacherButtonAdd" Click="ButtonAddTeacher" Margin="0,10,0,20" FontSize="15" Width="200" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom">Добавить</Button>
+                        </Grid>
+                        <Grid x:Name="JobWindow" HorizontalAlignment="Center" Visibility="Collapsed">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" FontSize="20" HorizontalAlignment="Center">Должности</Label>
+                            <ScrollViewer Grid.Row="1" x:Name="JobScroll" CanContentScroll="False" VerticalScrollBarVisibility="Auto">
+                                <StackPanel x:Name="JobList">
+
+                                </StackPanel>
+                            </ScrollViewer>
+                            <Button Grid.Row="2" x:Name="JobButtonAdd" Click="ButtonAddJob" Margin="0,10,0,20" FontSize="15" Width="200" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom">Добавить</Button>
+                        </Grid>
+                        <Grid x:Name="SpecWindow" HorizontalAlignment="Center" Visibility="Collapsed">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" FontSize="20" HorizontalAlignment="Center">Специальности</Label>
+                            <ScrollViewer Grid.Row="1" x:Name="SpecScroll" CanContentScroll="False" VerticalScrollBarVisibility="Auto">
+                                <StackPanel x:Name="SpecList">
+
+                                </StackPanel>
+                            </ScrollViewer>
+                            <Button Grid.Row="2" x:Name="SpecButtonAdd" Click="ButtonAddSpec" Margin="0,10,0,20" FontSize="15" Width="200" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom">Добавить</Button>
+                        </Grid>
+                        <Grid x:Name="AdminTypeWindow" HorizontalAlignment="Center" Visibility="Collapsed">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" FontSize="20" HorizontalAlignment="Center">Состав</Label>
+                            <ScrollViewer Grid.Row="1" x:Name="AdminTypeScroll" CanContentScroll="False" VerticalScrollBarVisibility="Auto">
+                                <StackPanel x:Name="AdminTypeList">
+
+                                </StackPanel>
+                            </ScrollViewer>
+                            <Button Grid.Row="2" x:Name="AdminTypeButtonAdd" Click="ButtonAddAdminType" Margin="0,10,0,20" FontSize="15" Width="200" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom">Добавить</Button>
+                        </Grid>
+                        <Grid x:Name="ScoreWindow" HorizontalAlignment="Center" Visibility="Collapsed">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*" />
+
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" FontSize="20" HorizontalAlignment="Center">Проходные баллы</Label>
+                            <TextBox x:Name="ScoreEdit" Grid.Row="1" FontSize="18" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center" Width="50">2025</TextBox>
+
+                            <Button Grid.Row="2" x:Name="ScoreButtonSave" Click="ButtonSaveScore" Margin="0,5,0,10" FontSize="15" Width="200" Style="{StaticResource RoundedButtonStyle}">Применить дату</Button>
+                            <ScrollViewer Grid.Row="3" x:Name="ScoreScroll" CanContentScroll="False" VerticalScrollBarVisibility="Auto" Margin="0,0,0,20" VerticalAlignment="Top">
+                                <StackPanel x:Name="ScoreList">
+
+                                </StackPanel>
+                            </ScrollViewer>
+                        </Grid>
+                        <Grid x:Name="SubjectWindow" HorizontalAlignment="Center" Visibility="Collapsed">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" FontSize="20" HorizontalAlignment="Center">Предметы</Label>
+                            <ScrollViewer Grid.Row="1" x:Name="SubjectScroll" CanContentScroll="False" VerticalScrollBarVisibility="Auto">
+                                <StackPanel x:Name="SubjectList">
+
+                                </StackPanel>
+                            </ScrollViewer>
+                            <Button Grid.Row="2" x:Name="SubjectButtonAdd" Click="ButtonAddSubject" Margin="0,10,0,20" FontSize="15" Width="200" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom">Добавить</Button>
+                        </Grid>
+                        <Grid x:Name="GroupWindow" HorizontalAlignment="Center" Visibility="Collapsed">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" FontSize="20" HorizontalAlignment="Center">Группы</Label>
+                            <ScrollViewer Grid.Row="1" x:Name="GroupScroll" CanContentScroll="False" VerticalScrollBarVisibility="Auto">
+                                <StackPanel x:Name="GroupList">
+
+                                </StackPanel>
+                            </ScrollViewer>
+                            <Button Grid.Row="2" x:Name="GroupButtonAdd" Click="ButtonAddGroup" Margin="0,10,0,20" FontSize="15" Width="200" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom">Добавить</Button>
+                        </Grid>
+                        <Grid x:Name="ScheduleWindow" HorizontalAlignment="Center" Visibility="Visible">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" FontSize="20" HorizontalAlignment="Center">Временное расписание</Label>
+                            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Center">
+                                <Label FontSize="16" Padding="0">Выберите день:</Label>
+                                <ComboBox x:Name="ComboBoxSelectDay" Width="100" Margin="10,0,0,0"></ComboBox>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Center">
+                                <Label FontSize="16" VerticalAlignment="Center" Padding="0" Margin="0,0,10,0">Выберите число:</Label>
+                                <Button x:Name="ScheduleDateChange" Click="ButtonDateChange" FontSize="15" Padding="10,5,10,5" Margin="0" Style="{StaticResource RoundedButtonStyle}">Выбрать</Button>
+                            </StackPanel>
+                            <ScrollViewer Grid.Row="3" x:Name="ScheduleScroll" CanContentScroll="False" VerticalScrollBarVisibility="Auto">
+                                <StackPanel x:Name="ScheduleList">
+
+                                </StackPanel>
+                            </ScrollViewer>
+                            <Button Grid.Row="4" x:Name="ScheduleButtonSave" Click="ButtonSaveSchedule" Margin="0,10,0,20" FontSize="15" Width="200" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom">Сохранить</Button>
+                        </Grid>
+                        <Grid x:Name="PermScheduleWindow" HorizontalAlignment="Center" Visibility="Collapsed">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" FontSize="20" HorizontalAlignment="Center">Постоянное расписание</Label>
+                            <ScrollViewer Grid.Row="1" x:Name="PermScheduleScroll" CanContentScroll="False" VerticalScrollBarVisibility="Auto" Margin="0,0,0,10">
+                                <StackPanel x:Name="PermScheduleList">
+
+                                </StackPanel>
+                            </ScrollViewer>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+        <Canvas x:Name="MyCanvas" VerticalAlignment="Top" HorizontalAlignment="Left" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Image/canvas.png"/>
+            </Canvas.Background>
+            <Border x:Name="DialogBox" Background="#65919c" Canvas.Top="90" Canvas.Left="175" Width="350" Height="170" CornerRadius="15" Visibility="Collapsed">
+                <StackPanel Margin="10,5">
+                    <Label x:Name="CanvasMain" FontSize="25" Foreground="White" HorizontalAlignment="Center" >Выход</Label>
+                    <TextBlock FontSize="20" x:Name="CanvasDescription" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" Foreground="White">Вы действительно хотите выйти?</TextBlock>
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
+                        <Button x:Name="YesButton" Click="ButtonYes" Style="{StaticResource RoundedButtonStyleWhite}" Width="120" Height="35" FontSize="18" Margin="0,5,40,5">Да</Button>
+                        <Button x:Name="NoButton" Click="ButtonNo" Style="{StaticResource RoundedButtonStyleWhite}" Width="120" FontSize="18" Height="35">Нет</Button>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Canvas>
+    </Grid>
+</Window>

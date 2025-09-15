@@ -1,0 +1,140 @@
+html{
+    font-size: 10px;
+}
+.structure {
+    background-color: #4b0082;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.structure_title {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.structure_subtitle {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.structure_director {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.structure_admin, .structure_specialists, .structure_teachers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.structure_adminItem, .structure_specialistItem {
+    flex: 1 1 45%;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.structure_photo {
+    max-width: 150px;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.structure_hierarchy {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.structure_hierarchyItem h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+}
+
+.structure_hierarchyItem ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.structure_hierarchyItem ul li {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.structure_hierarchyItem ul li::before {
+    content: "•";
+    color: #ffd700;
+    position: absolute;
+    left: -1.5rem;
+}
+
+.structure_teachersList {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.structure_teachersList li {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 0.5rem;
+}
+
+.structure_contacts {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.structure_contacts p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 1rem;
+}
+
+.structure_map {
+    margin-top: 1rem;
+}
+
+.structure_map #map {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Медиа-запросы для страницы "Структура колледжа" */
+@media (max-width: 768px) {
+    .structure_adminItem, .structure_specialistItem {
+        flex: 1 1 100%;
+    }
+
+    .structure_teachersList {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .structure_title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+
+    .structure_subtitle {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    .structure_adminItem, .structure_specialistItem {
+        padding: 1rem;
+    }
+
+    .structure_photo {
+        max-width: 120px;
+    }
+}

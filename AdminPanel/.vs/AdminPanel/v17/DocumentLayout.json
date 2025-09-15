@@ -1,0 +1,99 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\El Brus\\Desktop\\AdminPanel\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F936DE8D-97F9-4635-AECB-A3B3674C7487}|AdminPanel\\AdminPanel.csproj|c:\\users\\el brus\\desktop\\adminpanel\\adminpanel\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F936DE8D-97F9-4635-AECB-A3B3674C7487}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F936DE8D-97F9-4635-AECB-A3B3674C7487}|AdminPanel\\AdminPanel.csproj|C:\\Users\\El Brus\\Desktop\\AdminPanel\\adminpanel\\addeditschedule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F936DE8D-97F9-4635-AECB-A3B3674C7487}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\addeditschedule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F936DE8D-97F9-4635-AECB-A3B3674C7487}|AdminPanel\\AdminPanel.csproj|C:\\Users\\El Brus\\Desktop\\AdminPanel\\adminpanel\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F936DE8D-97F9-4635-AECB-A3B3674C7487}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F936DE8D-97F9-4635-AECB-A3B3674C7487}|AdminPanel\\AdminPanel.csproj|C:\\Users\\El Brus\\Desktop\\AdminPanel\\adminpanel\\addeditpermschedule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F936DE8D-97F9-4635-AECB-A3B3674C7487}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\addeditpermschedule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F936DE8D-97F9-4635-AECB-A3B3674C7487}|AdminPanel\\AdminPanel.csproj|C:\\Users\\El Brus\\Desktop\\AdminPanel\\adminpanel\\addeditschedule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F936DE8D-97F9-4635-AECB-A3B3674C7487}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\addeditschedule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\El Brus\\Desktop\\AdminPanel\\AdminPanel\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "AdminPanel\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\El Brus\\Desktop\\AdminPanel\\AdminPanel\\MainWindow.xaml",
+              "RelativeToolTip": "AdminPanel\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-03T13:03:09.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\El Brus\\Desktop\\AdminPanel\\AdminPanel\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\El Brus\\Desktop\\AdminPanel\\AdminPanel\\MainWindow.xaml.cs",
+              "RelativeToolTip": "AdminPanel\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAB8BAAAAAAAAAAAvwDABAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T17:48:31.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddEditSchedule.xaml",
+              "DocumentMoniker": "C:\\Users\\El Brus\\Desktop\\AdminPanel\\AdminPanel\\AddEditSchedule.xaml",
+              "RelativeDocumentMoniker": "AdminPanel\\AddEditSchedule.xaml",
+              "ToolTip": "C:\\Users\\El Brus\\Desktop\\AdminPanel\\AdminPanel\\AddEditSchedule.xaml",
+              "RelativeToolTip": "AdminPanel\\AddEditSchedule.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-02T13:01:46.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddEditPermSchedule.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\El Brus\\Desktop\\AdminPanel\\AdminPanel\\AddEditPermSchedule.xaml.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\AddEditPermSchedule.xaml.cs",
+              "ToolTip": "C:\\Users\\El Brus\\Desktop\\AdminPanel\\AdminPanel\\AddEditPermSchedule.xaml.cs",
+              "RelativeToolTip": "AdminPanel\\AddEditPermSchedule.xaml.cs",
+              "ViewState": "AgIAAOQAAAAAAAAAAAAlwEUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T08:49:00.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddEditSchedule.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\El Brus\\Desktop\\AdminPanel\\AdminPanel\\AddEditSchedule.xaml.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\AddEditSchedule.xaml.cs",
+              "ToolTip": "C:\\Users\\El Brus\\Desktop\\AdminPanel\\AdminPanel\\AddEditSchedule.xaml.cs",
+              "RelativeToolTip": "AdminPanel\\AddEditSchedule.xaml.cs",
+              "ViewState": "AgIAAPAAAAAAAAAAAAAkwAYBAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T08:47:57.645Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
